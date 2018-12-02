@@ -1,12 +1,14 @@
 package com.traning.task5;
 
 public class Town implements Node {
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private Composite parent;
     private int num;
+    private Node nextNode;
+    private Node prevNode;
 
-    public Town(int x, int y, int num) {
+    public Town(double x, double y, int num) {
         this.x = x;
         this.y = y;
     }
@@ -34,19 +36,19 @@ public class Town implements Node {
         this.parent = parent;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 
@@ -65,5 +67,36 @@ public class Town implements Node {
     public int hashCode() {
         String s = String.valueOf(x) + String.valueOf(y);
         return s.hashCode();
+    }
+
+    @Override
+    public Node nextNode() {
+        return nextNode;
+    }
+
+    @Override
+    public void setNextNode(Node node) {
+        nextNode = node;
+        if(node == null) return;
+        node.setPrevNode(this);
+    }
+
+    @Override
+    public Node prevNode() {
+        return prevNode;
+    }
+
+    @Override
+    public void setPrevNode(Node node) {
+        prevNode = node;
+    }
+
+    @Override
+    public String toString() {
+        return "Town{" +
+                "x=" + x +
+                ", y=" + y +
+                ", num=" + num +
+                '}';
     }
 }

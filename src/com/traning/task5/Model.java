@@ -7,16 +7,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TaskWrapper {
+public class Model {
     private List<Town> townList;
     private Map<Pair<Town, Town>, Integer> dist;
+    private double optimum;
 
-    public TaskWrapper() {
+    public Model() {
         townList = new ArrayList<>();
         dist = new HashMap<>();
     }
 
-    public void addTown(int x, int y, int num){
+    public void addTown(double x, double y, int num){
         Town newTown = new Town(x, y, num);
         Town existTown = findTown(newTown);
         if(existTown == null){
@@ -43,5 +44,13 @@ public class TaskWrapper {
 
     public int getDistance(Town t1, Town t2){
         return dist.getOrDefault(new Pair<>(t1, t2), -1);
+    }
+
+    public double getOptimum() {
+        return optimum;
+    }
+
+    public void setOptimum(double optimum) {
+        this.optimum = optimum;
     }
 }
