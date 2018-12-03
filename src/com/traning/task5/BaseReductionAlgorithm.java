@@ -22,8 +22,7 @@ public class BaseReductionAlgorithm {
         return innerClustering(list, 0, 0);
     }
 
-    private Composite innerClustering(List<Node> l, int num, int level){
-        List<Node> list = new ArrayList<>(l);
+    private Composite innerClustering(List<Node> list, int num, int level){
         if(list.size() <= k3 /*|| level >= k2*/) {
             Cluster composite = new Cluster(num);
             int i = 0;
