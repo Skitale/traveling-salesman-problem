@@ -1,7 +1,5 @@
 package com.traning.task5.entities;
 
-import com.traning.task5.entities.Town;
-
 import java.util.ArrayList;
 import java.util.List;
 

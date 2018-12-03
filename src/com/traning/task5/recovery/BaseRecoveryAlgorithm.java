@@ -23,7 +23,6 @@ public class BaseRecoveryAlgorithm {
 
     private void innerSolving(Composite cluster){
         setOptPathCycle(cluster);
-        Cluster cluster1 = (Cluster) cluster;
         boolean flag = true;
         for(Node clust : cluster.getClusters()){
             if(clust instanceof Composite){
@@ -33,7 +32,7 @@ public class BaseRecoveryAlgorithm {
         }
         //if all town do nothing
         if(flag) return;
-        postUnion(cluster1);
+        postUnion(cluster);
     }
 
     private void postUnion(Composite comp){
