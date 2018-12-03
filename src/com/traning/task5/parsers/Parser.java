@@ -1,6 +1,6 @@
 package com.traning.task5.parsers;
 
-import com.traning.task5.Model;
+import com.traning.task5.entities.Model;
 
 import java.io.*;
 import java.util.ArrayList;

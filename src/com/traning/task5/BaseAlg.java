@@ -1,5 +1,11 @@
 package com.traning.task5;
 
+import com.traning.task5.entities.Composite;
+import com.traning.task5.entities.Model;
+import com.traning.task5.entities.Node;
+import com.traning.task5.recovery.BaseRecoveryAlgorithm;
+import com.traning.task5.reduce.BaseReductionAlgorithm;
+
 public class BaseAlg {
     private Model tw;
     private int k1 = 8;

@@ -1,4 +1,4 @@
-package com.traning.task5;
+package com.traning.task5.entities;
 
 import java.util.List;
 

@@ -1,5 +1,9 @@
-package com.traning.task5;
+package com.traning.task5.recovery;
 
+import com.traning.task5.TownUtils;
+import com.traning.task5.entities.Cluster;
+import com.traning.task5.entities.Composite;
+import com.traning.task5.entities.Node;
 import javafx.util.Pair;
 
 import java.util.ArrayList;

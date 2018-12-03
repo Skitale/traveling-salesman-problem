@@ -1,4 +1,4 @@
-package com.traning.task5;
+package com.traning.task5.entities;
 
 public class Town implements Node {
     private double x;

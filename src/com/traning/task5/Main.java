@@ -1,5 +1,6 @@
 package com.traning.task5;
 
+import com.traning.task5.entities.Model;
 import com.traning.task5.parsers.Parser;
 
 import java.io.File;
