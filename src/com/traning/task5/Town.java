@@ -6,7 +6,6 @@ public class Town implements Node {
     private Composite parent;
     private int num;
     private Node nextNode;
-    private Node prevNode;
 
     public Town(double x, double y, int num) {
         this.x = x;
@@ -19,11 +18,6 @@ public class Town implements Node {
 
     public void setNum(int num) {
         this.num = num;
-    }
-
-    @Override
-    public int solve() {
-        return -1;
     }
 
     @Override
@@ -77,18 +71,6 @@ public class Town implements Node {
     @Override
     public void setNextNode(Node node) {
         nextNode = node;
-        if(node == null) return;
-        node.setPrevNode(this);
-    }
-
-    @Override
-    public Node prevNode() {
-        return prevNode;
-    }
-
-    @Override
-    public void setPrevNode(Node node) {
-        prevNode = node;
     }
 
     @Override

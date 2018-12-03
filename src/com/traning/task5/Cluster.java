@@ -7,7 +7,6 @@ public class Cluster implements Composite {
     private Composite parentCluster;
     private int num;
     private Node nextNode;
-    private Node prevNode;
     private List<Node> rawTowns;
 
     public Cluster(int num) {
@@ -46,11 +45,6 @@ public class Cluster implements Composite {
             }
         }
         return null;
-    }
-
-    @Override
-    public int solve() {
-        return 0;
     }
 
     @Override
@@ -99,6 +93,11 @@ public class Cluster implements Composite {
     }
 
     @Override
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    @Override
     public Node nextNode() {
         return nextNode;
     }
@@ -107,17 +106,6 @@ public class Cluster implements Composite {
     public void setNextNode(Node node) {
         nextNode = node;
         if(node == null) return;
-        node.setPrevNode(this);
-    }
-
-    @Override
-    public Node prevNode() {
-        return prevNode;
-    }
-
-    @Override
-    public void setPrevNode(Node node) {
-        prevNode = node;
     }
 
     @Override
