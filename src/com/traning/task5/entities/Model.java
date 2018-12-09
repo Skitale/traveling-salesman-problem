@@ -6,6 +6,7 @@ import java.util.List;
 public class Model {
     private List<Town> townList;
     private double optimum;
+    private String name;
 
     public Model() {
         townList = new ArrayList<>();
@@ -38,5 +39,13 @@ public class Model {
 
     public void setOptimum(double optimum) {
         this.optimum = optimum;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

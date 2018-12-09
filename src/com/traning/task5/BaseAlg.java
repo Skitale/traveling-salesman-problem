@@ -8,12 +8,12 @@ import com.traning.task5.reduce.BaseReductionAlgorithm;
 
 public class BaseAlg {
     private Model tw;
-    private int k1 = 8;
-    private int k2 = 1;
-    private int k3 = 7;
-    private Composite root;
-    private BaseReductionAlgorithm reducing;
-    private BaseRecoveryAlgorithm recovering;
+    protected int k1 = 8;
+    protected int k2 = 1;
+    protected int k3 = 10;
+    protected Composite root;
+    protected BaseReductionAlgorithm reducing;
+    protected BaseRecoveryAlgorithm recovering;
 
     public BaseAlg(Model tw) {
         this.tw = tw;
@@ -29,7 +29,7 @@ public class BaseAlg {
         return getSolution(root);
     }
 
-    private double getSolution(Composite composite){
+    protected double getSolution(Composite composite){
         if(composite.getSize() < 1) return -1;
         Node node = composite.getNodes().get(0);
         Node cur = node.nextNode();
@@ -42,4 +42,16 @@ public class BaseAlg {
         return sol;
     }
 
+
+    public int getK1() {
+        return k1;
+    }
+
+    public int getK2() {
+        return k2;
+    }
+
+    public int getK3() {
+        return k3;
+    }
 }

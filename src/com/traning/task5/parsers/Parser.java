@@ -15,6 +15,7 @@ public class Parser {
             Scanner s = new Scanner(r).useDelimiter("(\r\n)");
             int n = -1;
             double op = -1d;
+            model.setName(file.getName());
             if(s.hasNextInt()){
                 n = s.nextInt();
             }
