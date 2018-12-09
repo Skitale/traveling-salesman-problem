@@ -1,15 +1,11 @@
 package com.traning.task5.reduce;
 
-import com.traning.task5.entities.Model;
+import com.traning.task5.entities.*;
 import com.traning.task5.TownUtils;
-import com.traning.task5.entities.Cluster;
-import com.traning.task5.entities.Composite;
-import com.traning.task5.entities.Node;
 import javafx.util.Pair;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 
 public class BaseReductionAlgorithm {
     private Model m;
@@ -27,7 +23,7 @@ public class BaseReductionAlgorithm {
         return innerClustering(list, 0, 0);
     }
 
-    private Composite innerClustering(List<Node> list, int num, int level){
+    protected Composite innerClustering(List<Node> list, int num, int level){
         if(list.size() <= k3 /*|| level >= k2*/) {
             Cluster composite = new Cluster(num);
             int i = 0;

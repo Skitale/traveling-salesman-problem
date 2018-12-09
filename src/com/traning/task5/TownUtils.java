@@ -64,11 +64,17 @@ public class TownUtils {
         return maxT;
     }
 
-    public static List<List<Node>> getClusters(List<Node> markedList, List<Node> unmarkedList){
+    public static List<List<Node>> getClusters(List<Node> markedList, List<Node> unmarkedList) {
+        return getClustersWithBool(markedList, unmarkedList, true);
+    }
+
+    public static List<List<Node>> getClustersWithBool(List<Node> markedList, List<Node> unmarkedList, boolean withMarked) {
         List<List<Node>> result = new ArrayList<>();
-        for(Node tm : markedList){
+        for (Node tm : markedList) {
             result.add(new ArrayList<>());
-            result.get(result.size() - 1).add(tm);
+            if (withMarked) {
+                result.get(result.size() - 1).add(tm);
+            }
         }
 
         for(Node t : unmarkedList){
