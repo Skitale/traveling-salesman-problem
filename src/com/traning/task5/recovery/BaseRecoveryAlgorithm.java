@@ -1,7 +1,6 @@
 package com.traning.task5.recovery;
 
 import com.traning.task5.TownUtils;
-import com.traning.task5.entities.Cluster;
 import com.traning.task5.entities.Composite;
 import com.traning.task5.entities.Node;
 import javafx.util.Pair;
@@ -36,7 +35,9 @@ public class BaseRecoveryAlgorithm {
     }
 
     private void postUnion(Composite comp){
-        if(comp.getClusters().size() < 2) throw new UnsupportedOperationException();
+        if(comp.getClusters().size() == 1) {
+            comp = (Composite) comp.getClusters().get(0);
+        }
         List<Node> listClust = comp.getClusters();
         Composite n1 = (Composite) listClust.get(0);
         Composite n2 = (Composite) n1.nextNode();
